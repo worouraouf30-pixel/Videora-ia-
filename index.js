@@ -1,0 +1,1 @@
+export default function Home(){ return (<main style={{padding:24,background:'#0b0d10',minHeight:'100vh',color:'#e6eef6',fontFamily:'sans-serif'}}><h1>VIDEORA IA</h1><p>Welcome — English by default. Multilanguage ready (EN/FR/AR).</p><p>Frontend skeleton. Connect to backend at /api/*.</p></main>) }

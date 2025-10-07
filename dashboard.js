@@ -1,0 +1,1 @@
+export default function Dashboard(){ return (<main style={{padding:24}}><h2>Dashboard — Videora IA (stub)</h2><p>Here the user will access GPT vocal, generate videos, manage subscriptions and connect socials.</p></main>) }

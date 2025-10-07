@@ -1,0 +1,14 @@
+{
+  "name": "videora-ia",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix frontend install && npm --prefix backend install && npm --prefix mobile install",
+    "bootstrap": "npm run install:all",
+    "dev": "npx concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start": "npx concurrently \"npm --prefix backend start\" \"npm --prefix frontend start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

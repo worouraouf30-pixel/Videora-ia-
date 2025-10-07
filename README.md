@@ -1,19 +1,41 @@
-# Vidéora IA — Site de base (thème sombre)
+# Videora IA - Skeleton (ready-to-run)
 
-Ce dépôt contient un **site statique** prêt à être déployé. Il est conçu pour être la base de ton projet Vidéora IA :
-- Thème sombre natif, responsive, et moderne.
-- Détection automatique de la langue du navigateur (FR/EN).
-- Loader animé et structure prête pour intégration IA / monétisation.
+This archive provides a full skeleton for **Videora IA**: frontend (Next.js), backend (Express), and mobile (Expo).
+It is configured so that **after extracting** you can `cd videora-ia` and run a small set of commands to bootstrap the project.
 
-## Déployer sur Vercel
-1. Crée un dépôt GitHub nommé `videora-ia`.
-2. Upload le contenu de ce ZIP dans la racine du dépôt.
-3. Connecte ton dépôt à Vercel (https://vercel.com), choisis "Import Project" et sélectionne le repo.
-4. Vercel détectera automatiquement un projet statique et déploiera le site. Tu auras une URL du type `https://<nom>.vercel.app`.
+## Quick start (development)
+```bash
+# 1. unzip and enter folder
+cd videora-ia
 
-## Personnalisation rapide
-- Texte multilingue : `app.js` → object `strings`.
-- Couleurs / styles : `styles.css`.
-- Modules IA à ajouter plus tard : dossiers `/api` ou intégrations côté client.
+# 2. install dependencies for root + all sub-projects (frontend/backend/mobile)
+npm run bootstrap
 
-Bonne construction — crée, teste, itère. 🚀
+# 3. start dev servers (frontend + backend concurrently)
+npm run dev
+
+# Frontend will run on http://localhost:3000 by default
+# Backend will run on http://localhost:3001 by default
+```
+
+## Where to put your API keys
+Edit `config/.env.example` and create a `config/.env` file with your real keys:
+```
+OPENAI_API_KEY=
+ADSENSE_ID=
+ADMOB_APP_ID=
+TIKTOK_CLIENT_ID=
+FACEBOOK_APP_ID=
+GOOGLE_CLIENT_ID=
+MONGODB_URI=
+JWT_SECRET=
+```
+
+## Deploy
+- Frontend: Vercel (connect your GitHub repo)
+- Backend: Render / Railway / Replit
+- Mobile: Expo -> build a final APK / publish to Play Store
+
+This skeleton is designed to be edited: add your real implementation for GPT/video generation endpoints, social OAuth flows, AdSense/AdMob integration, and live streaming backend modules.
+
+Bonne construction — ready to customize and scale. 🚀
