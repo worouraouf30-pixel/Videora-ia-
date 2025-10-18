@@ -1,41 +1,33 @@
-# Videora IA - Skeleton (ready-to-run)
+# Videora IA — Final scaffold (English default)
 
-This archive provides a full skeleton for **Videora IA**: frontend (Next.js), backend (Express), and mobile (Expo).
-It is configured so that **after extracting** you can `cd videora-ia` and run a small set of commands to bootstrap the project.
+This project is a deploy-ready Next.js scaffold for "Videora IA" with:
+- Chat interface calling OpenAI (serverless API route).
+- Voice input / output placeholders.
+- Firebase Auth placeholders (Google + Email).
+- Upload page for clips (uses Firebase Storage — placeholder).
+- Help & Support (messages saved via API to Firestore placeholder).
+- Admin panel (prototype) and Settings where you can store API keys locally for testing.
+- AdSense / AdMob ad slot placeholders ready to receive your publisher ID.
 
-## Quick start (development)
-```bash
-# 1. unzip and enter folder
-cd videora-ia
+IMPORTANT (what you must do after download):
+1. Replace Firebase config placeholders in `firebaseConfig.js` or set the equivalent
+   environment variables in Vercel (recommended).
+2. Add your OpenAI API key to Vercel as `OPENAI_API_KEY` (server-side) to enable real AI responses.
+   - Locally, you can set it in a `.env.local` file as `OPENAI_API_KEY=sk-...` (do NOT commit keys).
+3. Add your AdSense publisher ID in Vercel as `NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-XXXXXXXX`.
+   Or, open Settings page in the app and paste your AdSense key for testing (stores in localStorage).
+4. For production support messages / uploads and admin, configure Firebase (Firestore + Storage)
+   and add the Firebase config to `firebaseConfig.js` or env vars.
 
-# 2. install dependencies for root + all sub-projects (frontend/backend/mobile)
-npm run bootstrap
+Quick deploy:
+- npm install
+- npm run build
+- Push to GitHub and connect to Vercel
+- Set environment variables on Vercel (OPENAI_API_KEY, NEXT_PUBLIC_ADSENSE_CLIENT, FIREBASE_*)
+- Deploy and test.
 
-# 3. start dev servers (frontend + backend concurrently)
-npm run dev
+Notes about AdSense:
+- To receive payments, Google AdSense usually requires account verification which may include
+  providing payment details. You can still configure ad slots and test with sample IDs.
 
-# Frontend will run on http://localhost:3000 by default
-# Backend will run on http://localhost:3001 by default
-```
-
-## Where to put your API keys
-Edit `config/.env.example` and create a `config/.env` file with your real keys:
-```
-OPENAI_API_KEY=
-ADSENSE_ID=
-ADMOB_APP_ID=
-TIKTOK_CLIENT_ID=
-FACEBOOK_APP_ID=
-GOOGLE_CLIENT_ID=
-MONGODB_URI=
-JWT_SECRET=
-```
-
-## Deploy
-- Frontend: Vercel (connect your GitHub repo)
-- Backend: Render / Railway / Replit
-- Mobile: Expo -> build a final APK / publish to Play Store
-
-This skeleton is designed to be edited: add your real implementation for GPT/video generation endpoints, social OAuth flows, AdSense/AdMob integration, and live streaming backend modules.
-
-Bonne construction — ready to customize and scale. 🚀
+Enjoy. If you want, I can now stitch the repo directly into your GitHub (I will provide git commands).
